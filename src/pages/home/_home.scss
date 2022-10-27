@@ -1,0 +1,62 @@
+.post-area-container {
+  border-bottom: 1px solid $Tgrey;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  position: relative;
+}
+
+.home h1 {
+  margin: 15px 0px 35px 10px;
+}
+
+.post-area {
+  textarea {
+    font-size: 1.1rem;
+    margin-left: 15px;
+    background: none;
+    width: 500px;
+    height: 130px;
+    border: none;
+    border-bottom: 1px solid $Tgrey;
+    resize: none;
+    color: $Twhite;
+    resize: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    margin: 7px;
+    color: $Tblue;
+  }
+  li:hover {
+    background: none;
+  }
+  button {
+    border: none;
+    background: $Tblue;
+    padding: 0px 15px;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    color: $Twhite;
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+.icons-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 15px 10px 10px;
+}
+
+.elements-displayer #nofollow {
+  color: $Twhite;
+  width: 295px;
+  margin: 20px auto;
+}

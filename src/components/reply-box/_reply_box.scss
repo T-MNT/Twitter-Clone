@@ -1,0 +1,85 @@
+.reply-box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+  background: $Tblack;
+  padding: 10px;
+  z-index: 5500;
+  cursor: default;
+
+  .reply-box {
+    position: relative;
+
+    ::after {
+      content: '';
+      height: 100px;
+      width: 1px;
+      position: absolute;
+      left: 30px;
+      top: 90px;
+      background: $Tgrey;
+    }
+    #X {
+      margin: 0px 0px 0px 385px;
+      cursor: pointer;
+      color: $Twhite;
+    }
+    .tweet-format {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+    }
+    .tweet-author {
+      display: flex;
+      align-items: center;
+      padding: 0px 10px;
+      h3 {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+
+    .tweet-content {
+      padding: 10px;
+      word-wrap: break-word;
+      min-height: 130px;
+    }
+    p {
+      margin: auto;
+      cursor: default;
+    }
+    textarea {
+      font-size: 1rem;
+      border: none;
+      color: $Twhite;
+      min-height: 80px;
+      width: 100%;
+      height: 160px;
+      background: none;
+      resize: none;
+      display: block;
+    }
+    textarea:focus {
+      outline: none;
+    }
+    button {
+      border: none;
+      background: $Tblue;
+      padding: 7px 15px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      color: $Twhite;
+      bottom: 15px;
+      right: 15px;
+      cursor: pointer;
+      margin: auto;
+      display: block;
+    }
+  }
+  .reply-part {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,76 @@
+.auth-boxes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background: $Tblackless;
+  padding: 20px;
+  z-index: 500;
+}
+
+#close {
+  font-size: 1.3rem;
+  margin: 0;
+  color: $Twhite;
+  cursor: pointer;
+  display: contents;
+}
+
+#error {
+  margin: 10px 0px 15px 0px;
+  color: #e11b1b;
+  font-size: 0.9rem;
+}
+
+.auth-boxes h2 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.auth-boxes label {
+  font-size: 0.8rem;
+  color: $TgreyText;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.auth-boxes input[type='text'] {
+  display: block;
+  font-size: 1.1rem;
+  color: $Twhite;
+  background: none;
+  border: none;
+}
+
+.auth-boxes input[type='password'] {
+  display: block;
+  width: 100%;
+  height: 25px;
+  font-size: 1.1rem;
+  color: $Twhite;
+  background: none;
+  border: none;
+}
+
+.auth-boxes input[type='text']:focus {
+  outline: none;
+}
+.auth-boxes input[type='password']:focus {
+  outline: none;
+}
+
+.auth-boxes input[type='submit'] {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.auth-boxes input[type='submit']:hover {
+  background: rgb(191, 191, 191);
+  transition: 0.2s;
+  cursor: pointer;
+}

@@ -1,0 +1,123 @@
+.profil-container {
+  border-bottom: 1px solid $Tgrey;
+  position: relative;
+}
+.pseudo-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 10px;
+}
+#pseudo {
+  margin-left: 30px;
+}
+.couverture-img {
+  height: 200px;
+  width: 100%;
+  background: url('../../assets/couv.jpg') center/cover;
+  margin: 0px 0px 10px 0px;
+}
+.profil-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  border: 3px solid black;
+  background: url('../../assets/unirex.JPG') center/cover;
+  position: absolute;
+  left: 20px;
+  top: 180px;
+}
+.profil-edit {
+  width: 100px;
+  margin: 10px 10px 10px 460px;
+  border: 1px solid $Tgrey;
+  padding: 5px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.profil-follow {
+  margin: 20px 10px 0px 480px;
+}
+
+.profil-buttons li {
+  border: 1px solid $Tgrey;
+  padding: 5px 8px;
+  border-radius: 20px;
+}
+
+.user-infos-container {
+  margin: 35px 20px 10px 20px;
+
+  #dpName {
+    color: $TgreyText;
+  }
+}
+
+.bio {
+  margin: 20px 0px 20px 0px;
+  color: $Twhite;
+}
+
+.link-date-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .link-date {
+    display: flex;
+    margin-right: 15px;
+  }
+  a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: $Tblue;
+    text-decoration: none;
+  }
+}
+
+.location-container {
+  display: flex;
+}
+#location {
+  color: $TgreyText;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+#date {
+  color: $TgreyText;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+.follow-followers-container {
+  display: flex;
+  p {
+    margin-right: 15px;
+    cursor: pointer;
+    color: $TgreyText;
+  }
+}
+
+.medias-container {
+  border-bottom: 1px solid $Tgrey;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+  }
+  li {
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+.user-infos-container2 {
+  margin: 75px 20px 10px 20px;
+}
+
+.displayName-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 15px;
+}

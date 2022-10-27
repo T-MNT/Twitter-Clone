@@ -1,0 +1,56 @@
+.tweet-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 15px;
+  width: 540px;
+  height: 250px;
+  background: #181818;
+  padding: 5px 10px;
+  z-index: 500;
+  border: 1px solid rgba(165, 165, 165, 0.677);
+}
+
+.tweet-box p {
+  margin: 10px 0px 20px 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.tweet-box .pic-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tweet-box textarea {
+  font-size: 1.1rem;
+  margin: 0px 0px 20px 10px;
+  height: 130px;
+  width: 100%;
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+  resize: none;
+}
+
+.tweet-box button {
+  border: none;
+  background: #1da1f2;
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  color: white;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+}
+/*# sourceMappingURL=tweet_box.css.map */

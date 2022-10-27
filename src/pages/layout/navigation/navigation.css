@@ -1,0 +1,27 @@
+.navigation .icon {
+  margin-right: 25px;
+}
+
+.navigation li:hover {
+  background: none;
+}
+
+.navigation ul {
+  width: 120px;
+}
+
+.navigation li {
+  margin: 20px 0px;
+}
+
+.navigation-item a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 80px;
+      grid-template-columns: 40px 80px;
+}
+
+.navigation-item {
+  width: 100%;
+}
+/*# sourceMappingURL=navigation.css.map */

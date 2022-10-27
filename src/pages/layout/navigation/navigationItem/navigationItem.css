@@ -1,0 +1,14 @@
+.navigation-item ul li {
+  margin: 0px 0px 25px 15px;
+}
+
+.navigation-item ul li:hover {
+  background: #657786;
+  cursor: pointer;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=navigationItem.css.map */

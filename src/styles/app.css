@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0b0b0b;
+  color: #dcdbdb;
+  font-family: 'Roboto';
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: rgba(135, 137, 138, 0.278);
+}
+
+.label-input {
+  border: 1px solid rgba(135, 137, 138, 0.278);
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin-bottom: 30px;
+}
+
+.blue-white-button {
+  margin: auto;
+  background: #1d9af1;
+  color: white;
+  border-radius: 25px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+/*# sourceMappingURL=app.css.map */

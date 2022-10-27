@@ -1,0 +1,157 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+  position: relative;
+}
+
+#white-bg {
+  background: rgba(246, 244, 244, 0.146);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 0vw;
+  z-index: 5000;
+}
+
+nav {
+  height: 100vh;
+  max-height: 100vh;
+  min-width: 70px;
+  font-size: 1.5rem;
+  position: relative;
+
+  .navigation-container {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+  }
+  #tweet-button {
+    width: 120px;
+    margin: 0px;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  p {
+    font-size: 1rem;
+    color: $TgreyText;
+  }
+
+  .author-pic {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .pseudo {
+    color: white;
+    font-size: 1.2rem;
+  }
+}
+.blue-button {
+  display: none;
+}
+.prof-logout-container {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+
+  .blue-white-button {
+    margin-top: 15px;
+  }
+}
+
+.main-part {
+  border-left: 1px solid $Tgrey;
+  border-right: 1px solid $Tgrey;
+  min-width: 600px;
+}
+
+.trendings-part {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  form {
+    width: 350px;
+  }
+
+  input {
+    width: 350px;
+    height: 35px;
+    resize: none;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 25px;
+    background: $Tblackless;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1rem;
+    color: $Twhite;
+  }
+
+  .friends-suggests {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav .navigation-container {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .profile .author-pic {
+    margin: 0px;
+  }
+  .profile-pseudo-dp {
+    display: none;
+  }
+  .blue-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: $Tblue;
+    border-radius: 50px;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+  .navigation-container .blue-white-button {
+    display: none;
+  }
+  .prof-logout-container {
+    right: 50%;
+    transform: translateX(50%);
+    .blue-white-button {
+      display: none;
+    }
+  }
+  .navigation li h4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .trendings-part {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  .trendings-part {
+    display: none;
+  }
+  .main {
+    grid-template-columns: 70px 600px;
+  }
+}

@@ -1,0 +1,103 @@
+.reply-box-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid rgba(128, 128, 128, 0.479);
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+  background: #141414;
+  padding: 10px;
+  z-index: 500;
+  cursor: default;
+}
+
+.reply-box-container .reply-box {
+  position: relative;
+}
+
+.reply-box-container .reply-box ::after {
+  content: '';
+  height: 100px;
+  width: 1px;
+  position: absolute;
+  left: 30px;
+  top: 90px;
+  background: rgba(135, 137, 138, 0.278);
+}
+
+.reply-box-container .reply-box #X {
+  margin: 0px 0px 0px 385px;
+  cursor: pointer;
+  color: white;
+}
+
+.reply-box-container .reply-box .tweet-format {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 1fr;
+      grid-template-columns: 60px 1fr;
+}
+
+.reply-box-container .reply-box .tweet-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px;
+}
+
+.reply-box-container .reply-box .tweet-author h3 {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.reply-box-container .reply-box .tweet-content {
+  padding: 10px;
+  word-wrap: break-word;
+  min-height: 130px;
+}
+
+.reply-box-container .reply-box p {
+  margin: auto;
+  cursor: default;
+}
+
+.reply-box-container .reply-box textarea {
+  font-size: 1rem;
+  border: none;
+  color: white;
+  min-height: 80px;
+  width: 100%;
+  height: 160px;
+  background: none;
+  resize: none;
+  display: block;
+}
+
+.reply-box-container .reply-box textarea:focus {
+  outline: none;
+}
+
+.reply-box-container .reply-box button {
+  border: none;
+  background: #1da1f2;
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  color: white;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+}
+
+.reply-box-container .reply-part {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=reply_box.css.map */

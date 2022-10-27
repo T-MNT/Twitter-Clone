@@ -1,0 +1,125 @@
+.card {
+  padding: 15px 15px 0px 0px;
+  border-bottom: 1px solid rgba(135, 137, 138, 0.368);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12% 88%;
+      grid-template-columns: 12% 88%;
+  position: relative;
+}
+
+.author-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-pic {
+  width: 50px;
+  height: 50px;
+  background: url(../../assets/unirex.JPG) center/cover;
+  border-radius: 50px;
+  margin: 0px auto;
+}
+
+.tweet p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.author-date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.author-date-container p {
+  color: #919191;
+  margin: 0px 30px 0px 5px;
+  font-size: 0.9rem;
+}
+
+.card h4 {
+  font-weight: bold;
+}
+
+#tweet-date {
+  font-size: 0.9rem;
+  color: grey;
+  margin: 0px;
+  cursor: default;
+}
+
+.tweet-content-container {
+  width: 100%;
+  height: auto;
+}
+
+.tweet-content-container p {
+  width: 500px;
+  height: auto;
+  word-wrap: break-word;
+}
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.icon-container p {
+  margin-left: 5px;
+}
+
+.icons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 20px 0px 15px 0px;
+}
+
+.icons-list li {
+  width: 100px;
+  margin: auto 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icons-list li:hover {
+  background: none;
+}
+
+.delete-tweet {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,48 @@
+.follow-displayer-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 310px;
+  background: $Tblack;
+  z-index: 5500;
+  padding: 15px;
+  border-radius: 15px;
+
+  .follow-displayer {
+    position: relative;
+  }
+  span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+  }
+  ul {
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 350px;
+    margin-top: 15px;
+    li {
+      display: grid;
+      grid-template-columns: 70px 90px 120px;
+      background: #1b1f22;
+      height: 70px;
+      width: 280px;
+      margin: 5px 0px;
+      align-items: center;
+      border-radius: 5px;
+    }
+  }
+  ul::-webkit-scrollbar {
+    width: 10px;
+  }
+  ul::-webkit-scrollbar-track {
+    background: #252b2f;
+    border-radius: 5px;
+  }
+  ul::-webkit-scrollbar-thumb {
+    background: #3e484f;
+    border-radius: 5px;
+  }
+}

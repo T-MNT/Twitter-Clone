@@ -1,0 +1,29 @@
+.navigation .icon {
+  margin-right: 25px;
+}
+
+.navigation li:hover {
+  background: none;
+}
+
+.navigation li {
+  margin: 20px 0px;
+}
+
+.navigation .navigation-item a {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation {
+    margin: auto;
+  }
+  .navigation .icon {
+    margin: 0px;
+    width: 50px;
+  }
+  .navigation .navigation-item a {
+    display: block;
+  }
+}

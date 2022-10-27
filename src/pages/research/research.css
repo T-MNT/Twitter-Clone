@@ -1,0 +1,31 @@
+.title {
+  padding-bottom: 15px;
+  display: block;
+  width: 578px;
+  margin: 20px 0px 0px 20px;
+  padding-bottom: 10px;
+}
+
+.posts-area ul:first-child {
+  border-top: 1px solid rgba(135, 137, 138, 0.368);
+}
+
+.search .friendSuggest {
+  padding: 0px;
+  width: 320px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.user-title {
+  margin-bottom: 20px;
+}
+
+.search {
+  width: 598px;
+}
+
+#no-tweet {
+  margin: 15px 0px 0px 20px;
+}
+/*# sourceMappingURL=research.css.map */

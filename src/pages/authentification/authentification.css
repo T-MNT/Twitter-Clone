@@ -1,0 +1,106 @@
+.auth {
+  height: 100vh;
+  background: #010001;
+  position: relative;
+  z-index: 100;
+}
+
+.auth ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth li {
+  font-size: 0.8rem;
+  color: grey;
+  margin: auto;
+}
+
+.auth .ul-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth-container {
+  height: 96vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 54% 46%;
+      grid-template-columns: 54% 46%;
+}
+
+.img-part {
+  background: url(../../assets/auth_img.JPG);
+}
+
+.auth-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth-part .auth-part-container {
+  margin-left: 40px;
+  width: 600px;
+}
+
+.auth-part h1 {
+  font-size: 4.5rem;
+  margin-bottom: 45px;
+}
+
+.auth-part h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.auth-part .log-part {
+  width: 300px;
+}
+
+.auth-part .log-part button {
+  display: block;
+  padding: 10px 0px;
+  width: 100%;
+  border-radius: 80px;
+  margin: 10px 0px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: #1d9af1;
+  color: white;
+}
+
+.auth-part .log-part button:hover {
+  cursor: pointer;
+}
+
+.auth-part .log-part p {
+  font-size: 0.7rem;
+}
+
+.auth-part .log-part h3 {
+  margin: 50px 0px 20px 0px;
+}
+
+.auth-part .log-part #login {
+  background: none;
+  border: 1px solid grey;
+  color: #1d9af1;
+}
+/*# sourceMappingURL=authentification.css.map */

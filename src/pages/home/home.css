@@ -1,0 +1,79 @@
+.post-area-container {
+  border-bottom: 1px solid rgba(135, 137, 138, 0.368);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 1fr;
+      grid-template-columns: 70px 1fr;
+  position: relative;
+}
+
+.home h1 {
+  margin: 15px 0px 35px 10px;
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.post-area textarea {
+  font-size: 1.1rem;
+  margin-left: 15px;
+  background: none;
+  width: 500px;
+  height: 130px;
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.47);
+  resize: none;
+  color: white;
+  resize: none;
+}
+
+.post-area textarea:focus {
+  outline: none;
+}
+
+.post-area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-area li {
+  margin: 7px;
+  color: #1da1f2;
+}
+
+.post-area li:hover {
+  background: none;
+}
+
+.post-area button {
+  border: none;
+  background: #1da1f2;
+  padding: 0px 15px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+}
+
+.icons-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 15px 10px 10px;
+}
+
+.elements-displayer #nofollow {
+  color: white;
+  width: 295px;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=home.css.map */

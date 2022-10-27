@@ -1,0 +1,65 @@
+.profil-edit-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  width: 500px;
+  height: 600px;
+  background: $Tblack;
+  padding: 20px;
+  z-index: 5500;
+
+  h2 {
+    margin: 40px 0px;
+    font-size: 1.8rem;
+    cursor: default;
+  }
+
+  form {
+    width: 440px;
+    height: 540px;
+    margin: auto;
+  }
+
+  label {
+    font-size: 0.8rem;
+    color: $TgreyText;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type='text'] {
+    display: block;
+    width: 439px;
+    height: 25px;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    border: none;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    color: $Twhite;
+    background: none;
+    resize: none;
+    border: none;
+  }
+  input[type='submit'] {
+    width: 150px;
+    height: 40px;
+  }
+  input[type='text']:focus {
+    outline: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  .blue-white-button {
+    display: block;
+    font-size: 1rem;
+  }
+}

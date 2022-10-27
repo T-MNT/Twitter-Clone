@@ -1,0 +1,92 @@
+.card {
+  padding: 15px 15px 0px 0px;
+  border-bottom: 1px solid $Tgrey;
+  position: relative;
+  display: grid;
+  grid-template-columns: 12% 88%;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+}
+
+.author-pic {
+  width: 50px;
+  height: 50px;
+  background: url(../../assets/unirex.JPG) center/cover;
+  border-radius: 50px;
+  margin: 0px auto;
+}
+
+.tweet p {
+  color: $Twhite;
+  font-size: 0.9rem;
+}
+
+.author-date-container {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+  p {
+    color: $TgreyText;
+    margin: 0px 30px 0px 5px;
+    font-size: 0.9rem;
+  }
+}
+
+.card h4 {
+  font-weight: bold;
+}
+
+#tweet-date {
+  font-size: 0.9rem;
+  color: $TgreyText;
+
+  margin: 0px;
+  cursor: default;
+}
+.tweet-content-container {
+  width: 100%;
+  height: auto;
+  p {
+    width: 500px;
+    height: auto;
+    word-wrap: break-word;
+  }
+}
+.icon-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  p {
+    margin-left: 5px;
+  }
+}
+.icons-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 18px;
+  width: 100%;
+  margin: 20px 0px 15px 0px;
+  li {
+    width: 100px;
+    margin: auto 0px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icons-list li:hover {
+  background: none;
+}
+
+.delete-tweet {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
