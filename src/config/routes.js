@@ -4,6 +4,7 @@ const routes = {
   RESEARCH: '/research/results',
   TWEET: '/tweet/:id',
   PROFIL_PAGE: '/profil/:dpName',
+  MESSAGES: '/messages',
 };
 
 export default routes;

@@ -14,6 +14,7 @@ import axios from 'axios';
 import { setPostsData } from './feature/posts.slice';
 import { setUserProfilData } from './feature/userProfil.slice';
 import Research from './pages/research/Research';
+import Messages from './pages/messages/Messages';
 
 function App() {
   ///Redux Toolkit////////////////////////////////////////////
@@ -82,6 +83,14 @@ function App() {
           element={
             <Layout>
               <TweetPage user={user} />
+            </Layout>
+          }
+        />
+        <Route
+          path={routes.MESSAGES}
+          element={
+            <Layout>
+              <Messages user={user} />
             </Layout>
           }
         />

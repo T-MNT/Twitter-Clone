@@ -666,6 +666,45 @@ nav #tweet-button {
   padding-left: 15px;
 }
 
+.header {
+  padding: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.header button {
+  color: #dcdbdb;
+  background: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dcdbdb;
+  border-radius: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.header button #message-logo {
+  height: 17px;
+}
+
+.header input {
+  border: 1px solid #657786;
+  background: none;
+  width: 260px;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 20px;
+  color: #657786;
+  margin-top: 40px;
+}
+
+.header input:focus {
+  outline: 1px solid #1d9af1;
+  border: 1px solid #1d9af1;
+}
+
 .follow-displayer-container {
   position: absolute;
   top: 30%;
@@ -1170,5 +1209,11 @@ nav #tweet-button {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.m-research {
+  height: 500px;
+  width: 500px;
+  border: 1px solid rgba(135, 137, 138, 0.278);
 }
 /*# sourceMappingURL=index.css.map */
