@@ -11,6 +11,6 @@
 
 ##Fonctionalités à venir
 
--Système de messagerie.
--Possibilité de tweeter une image ou un vidéo.
--Possibilité de modifier sa photo de profil et de couverture
+- Système de messagerie.
+- Possibilité de tweeter une image ou une vidéo.
+- Possibilité de modifier sa photo de profil et de couverture
