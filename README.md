@@ -1,6 +1,6 @@
 # Twitter-Clone
 
-#Fonctionalités#
+## Fonctionalités
 
 - Inscription et connexion grâce à une adresse mail et un mot de passe.
 - Edition de son profil (pseudo, bio, lien, localisation).
@@ -9,7 +9,7 @@
 - Système de follow pour suivre d'autres utilisateurs
 - Fonction recherche pour rechercher un tweet ou un utilisateur.
 
-#Fonctionalités à venir#
+## Fonctionalités à venir
 
 - Système de messagerie.
 - Possibilité de tweeter une image ou une vidéo.
