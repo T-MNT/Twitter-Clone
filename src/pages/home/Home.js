@@ -79,9 +79,14 @@ const Home = (props) => {
       };
 
       if (
-        userProfil &&
-        userProfil.Follows &&
-        Object.values(userProfil.Follows).includes(mappedData.authorDisplayName)
+        (userProfil &&
+          userProfil.Follows &&
+          Object.values(userProfil.Follows).includes(
+            mappedData.authorDisplayName
+          )) ||
+        (userProfil &&
+          userProfil.Follows &&
+          mappedData.authorDisplayName === userProfil.displayName)
       ) {
         dataArray.push(mappedData);
         displayedData = dataArray.map((tweet) => (
