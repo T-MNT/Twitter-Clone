@@ -15,4 +15,6 @@
 - Possibilité de tweeter une image ou une vidéo.
 - Possibilité de modifier sa photo de profil et de couverture
 
+Ce projet est en cours de développement, des bugs peuvent survenir
+
 Pour lancer le projet, utiliser dans le terminal la commande : **npm install** puis la commande : **npm start**
