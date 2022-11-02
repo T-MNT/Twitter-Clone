@@ -388,8 +388,8 @@ const ProfilPage = (props) => {
             </div>
 
             <div className="follow-followers-container">
-              {followDisplayer()}
-              {followerDisplayer()}
+              <p>{followDisplayer()}</p>
+              <p>{followerDisplayer()}</p>
             </div>
           </div>
         </div>
