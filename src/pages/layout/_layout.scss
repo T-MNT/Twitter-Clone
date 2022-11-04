@@ -78,6 +78,12 @@ nav {
   min-width: 600px;
 }
 
+.main-part-messages {
+  border-left: 1px solid $Tgrey;
+  border-right: 1px solid $Tgrey;
+  width: 900px;
+}
+
 .trendings-part {
   display: flex;
   flex-direction: column;

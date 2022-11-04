@@ -4,6 +4,7 @@ import routes from '../../../config/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouseChimneyWindow,
+  faMessage,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -30,6 +31,14 @@ const Navigation = () => {
             >
               <FontAwesomeIcon className="icon" icon={faUser} />
               <h4>Profil</h4>
+            </NavigationItem>
+          </div>
+        </li>
+        <li>
+          <div>
+            <NavigationItem to={routes.MESSAGES}>
+              <FontAwesomeIcon className="icon" icon={faMessage} />
+              <h4>Messages</h4>
             </NavigationItem>
           </div>
         </li>

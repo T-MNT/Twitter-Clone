@@ -2,4 +2,16 @@
   height: 500px;
   width: 500px;
   border: 1px solid $Tgrey;
+
+  li {
+    display: flex;
+    cursor: pointer;
+
+    .author-pic {
+      margin: 0px 0px 0px 10px;
+    }
+    h4 {
+      margin: 0px 10px;
+    }
+  }
 }

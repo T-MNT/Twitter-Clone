@@ -1,3 +1,13 @@
+.messages {
+  display: grid;
+  grid-template-columns: 340px 560px;
+
+  .m-left-part {
+    height: 100vh;
+    border-right: 1px solid $Tgrey;
+  }
+}
+
 .header {
   padding: 20px;
   width: 300px;

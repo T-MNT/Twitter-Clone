@@ -1,11 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const MessageResearch = () => {
+const MessageResearch = (props) => {
   const [allUsers, setAllUsers] = useState();
   const [research, setResearch] = useState();
+  const [searchResults, setSearchResults] = useState([]);
 
-  let searchResult = [];
+  const userProfil = useSelector((state) => state.userProfilReducer.profil);
+
+  let result = [];
   let mappedSearchResult;
 
   useEffect(() => {
@@ -22,26 +26,33 @@ const MessageResearch = () => {
         allUsers[key].Profil.pseudo.includes(research) ||
         allUsers[key].Profil.displayName.includes(research)
       ) {
-        searchResult.push(allUsers[key]);
+        result.push(allUsers[key]);
+        setSearchResults(result);
       }
-      console.log(searchResult);
     }
   }, [research]);
 
-  useEffect(() => {
-    searchedUsersHandler();
-  }, [searchResult]);
-
   const searchedUsersHandler = () => {
-    if (searchResult.length > 0) {
-      mappedSearchResult = searchResult.map((user) => (
-        <li>
+    console.log(searchResults);
+    if (searchResults.length > 0) {
+      return searchResults.map((user) => (
+        <li onClick={() => createConversation(user.Profil.displayName)}>
           <div className="author-pic" />
           <h4>{user.Profil.pseudo}</h4>
           <h5>{user.Profil.displayName}</h5>
         </li>
       ));
     } else return 'Aucun utilisateur trouvé';
+  };
+
+  const createConversation = (userToMessage) => {
+    if (userProfil && userProfil.displayName) {
+      axios.post(
+        `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations/${userToMessage}.json`,
+        JSON.stringify('')
+      );
+      props.setNewMessageActive(false);
+    }
   };
 
   return (
@@ -53,7 +64,9 @@ const MessageResearch = () => {
         placeholder="Rechercher un utilisateur"
         onChange={(e) => setResearch(e.target.value)}
       />
-      <ul>{mappedSearchResult}</ul>
+      <div className="friendSuggest">
+        <ul>{searchedUsersHandler()}</ul>
+      </div>
     </div>
   );
 };

@@ -27,7 +27,6 @@ const Layout = (props) => {
   };
 
   //Fonction recherche//
-
   const search = async (e) => {
     e.preventDefault();
     if (String(searchInput).length > 0) {
@@ -114,20 +113,30 @@ const Layout = (props) => {
         </div>
       </nav>
 
-      <section className="main-part">{props.children}</section>
-      <section className="trendings-part">
-        <form onSubmit={(e) => search(e)}>
-          <input
-            type="text"
-            onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Recherche Twitter"
-          />
-        </form>
-
-        <div className="friends-suggests">
-          <FriendSuggest user={props.user} />
-        </div>
+      <section
+        className={
+          document.location.href.split('/')[3] === 'messages'
+            ? 'main-part-messages'
+            : 'main-part'
+        }
+      >
+        {props.children}
       </section>
+      {document.location.href.split('/')[3] === 'messages' ? null : (
+        <section className="trendings-part">
+          <form onSubmit={(e) => search(e)}>
+            <input
+              type="text"
+              onChange={(e) => setSearchInput(e.target.value)}
+              placeholder="Recherche Twitter"
+            />
+          </form>
+
+          <div className="friends-suggests">
+            <FriendSuggest user={props.user} />
+          </div>
+        </section>
+      )}
       <div className="tweet_box-container">
         {active ? <Tweet_box setActive={setActive} /> : null}
       </div>

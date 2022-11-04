@@ -100,6 +100,7 @@ const Home = (props) => {
             setBlankActive={setBlankActive}
           />
         ));
+        console.log(displayedData);
       }
     }
   };
