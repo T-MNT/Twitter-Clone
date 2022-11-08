@@ -8,6 +8,13 @@
   }
 }
 
+#message-research-container {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
 .header {
   padding: 20px;
   width: 300px;
@@ -41,5 +48,19 @@
   input:focus {
     outline: 1px solid $Tblue;
     border: 1px solid $Tblue;
+  }
+}
+
+.conv-container {
+  border: 1px solid $Tgrey;
+  border-radius: 10px;
+  margin: 10px auto;
+  height: 50px;
+  padding: 5px;
+  width: 90%;
+  cursor: pointer;
+
+  h4 {
+    margin-bottom: 10px;
   }
 }

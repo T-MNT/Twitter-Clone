@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const MessageResearch = (props) => {
   const [allUsers, setAllUsers] = useState();
-  const [research, setResearch] = useState();
+  const [research, setResearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
   const userProfil = useSelector((state) => state.userProfilReducer.profil);
@@ -42,7 +42,10 @@ const MessageResearch = (props) => {
           <h5>{user.Profil.displayName}</h5>
         </li>
       ));
-    } else return 'Aucun utilisateur trouvé';
+    }
+    if (searchResults.length < 1 && research.length > 0) {
+      return 'Aucun utilisateur trouvé';
+    }
   };
 
   const createConversation = (userToMessage) => {
@@ -51,21 +54,24 @@ const MessageResearch = (props) => {
         `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations/${userToMessage}.json`,
         JSON.stringify('')
       );
-      props.setNewMessageActive(false);
+      props.openMessageResearch(false);
     }
   };
 
   return (
-    <div className="m-research">
-      <h1>Message Recherche</h1>
-      <input
-        type="text"
-        maxLength={28}
-        placeholder="Rechercher un utilisateur"
-        onChange={(e) => setResearch(e.target.value)}
-      />
-      <div className="friendSuggest">
-        <ul>{searchedUsersHandler()}</ul>
+    <div className="m-research-container">
+      <div className="m-research">
+        <span onClick={() => props.openMessageResearch(false)}>X</span>
+        <h1>Créer une nouvelle conversation</h1>
+        <input
+          type="text"
+          maxLength={28}
+          placeholder="Rechercher un utilisateur"
+          onChange={(e) => setResearch(e.target.value)}
+        />
+        <div className="friendSuggest">
+          <ul>{searchedUsersHandler()}</ul>
+        </div>
       </div>
     </div>
   );

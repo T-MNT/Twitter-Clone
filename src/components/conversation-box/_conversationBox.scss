@@ -1,0 +1,76 @@
+.conversation-box {
+  position: relative;
+  height: 100vh;
+
+  li {
+    max-width: 260px;
+  }
+
+  #li-my-message {
+    margin-left: 250px;
+    #message-date {
+      margin: 10px 0px 0px 20px;
+    }
+  }
+
+  #li-friend-message {
+    margin-left: 5px;
+  }
+
+  .message-bubble {
+    border: 1px solid $Tgrey;
+    padding: 10px 20px;
+    max-width: 260px;
+    margin: 15px 0px;
+  }
+
+  #my-message {
+    background: $Tblue;
+    color: $Twhite;
+    border-radius: 30px 30px 5px 30px;
+    padding: 10px 20px;
+
+    p {
+      color: $Twhite;
+    }
+  }
+  // #friend-message {
+  //   background: $Tgrey;
+  //   color: $Twhite;
+  //   margin-left: 5px;
+  //   border-radius: 30px 30px 30px 5px;
+  // }
+
+  .textarea-container {
+    position: absolute;
+
+    bottom: 0px;
+    border-top: 1px solid $Tgrey;
+    padding: 10px;
+    width: 540px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    textarea {
+      margin: auto;
+      display: block;
+      border: 1px solid $TgreyText;
+      padding: 10px 20px;
+      width: 100%;
+      height: 20px;
+      color: $Twhite;
+      font-size: 1rem;
+      font-weight: 200;
+      resize: none;
+      border-radius: 50px;
+      background: $Tblackless;
+    }
+
+    textarea:focus {
+      outline: 1px solid $Tblue;
+      border: 1px solid $Tblue;
+    }
+  }
+}

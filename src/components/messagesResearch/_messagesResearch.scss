@@ -1,7 +1,42 @@
-.m-research {
-  height: 500px;
-  width: 500px;
+.m-research-container {
+  height: 460px;
+
+  padding: 20px;
+  background: $Tblackless;
   border: 1px solid $Tgrey;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+
+  .m-research {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    span {
+      margin: 0px 0px 15px 95%;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  input {
+    border: 1px solid $TgreyText;
+    background: none;
+    width: 260px;
+    height: 40px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    color: $TgreyText;
+    margin-top: 40px;
+  }
+  input:focus {
+    outline: 1px solid $Tblue;
+    border: 1px solid $Tblue;
+  }
 
   li {
     display: flex;
