@@ -50,10 +50,12 @@ const MessageResearch = (props) => {
 
   const createConversation = (userToMessage) => {
     if (userProfil && userProfil.displayName) {
-      axios.post(
-        `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations/${userToMessage}.json`,
-        JSON.stringify('')
-      );
+      axios
+        .post(
+          `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations/${userToMessage}.json`,
+          JSON.stringify('')
+        )
+        .then(props.refreshData);
       props.openMessageResearch(false);
     }
   };

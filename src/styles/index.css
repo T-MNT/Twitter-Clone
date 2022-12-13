@@ -1313,6 +1313,18 @@ nav #tweet-button {
   height: 100vh;
 }
 
+.conversation-box h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0px 20px 20px;
+  border-bottom: 1px solid rgba(135, 137, 138, 0.278);
+}
+
+.conversation-box ul {
+  padding-top: 40px;
+}
+
 .conversation-box li {
   max-width: 260px;
 }
@@ -1322,11 +1334,15 @@ nav #tweet-button {
 }
 
 .conversation-box #li-my-message #message-date {
-  margin: 10px 0px 0px 20px;
+  margin: 10px 0px 20px 20px;
 }
 
 .conversation-box #li-friend-message {
   margin-left: 5px;
+}
+
+.conversation-box #li-friend-message #message-date {
+  margin: 10px 0px 20px 5px;
 }
 
 .conversation-box .message-bubble {
@@ -1345,6 +1361,18 @@ nav #tweet-button {
 
 .conversation-box #my-message p {
   color: #dcdbdb;
+}
+
+.conversation-box #friend-message {
+  background: rgba(135, 137, 138, 0.278);
+  color: #dcdbdb;
+  margin-left: 5px;
+  border-radius: 30px 30px 30px 5px;
+  padding: 10px 20px;
+}
+
+.conversation-box #friend-message p {
+  color: white;
 }
 
 .conversation-box .textarea-container {

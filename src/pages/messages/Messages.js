@@ -10,42 +10,68 @@ import ConversationBox from '../../components/conversation-box/ConversationBox';
 
 const Messages = () => {
   const [research, setResearch] = useState();
-  const [conversationsData, setConversationsData] = useState();
-  const [conversations, setConversations] = useState([]);
-  const [conversationData, setConversationData] = useState();
+  //Data brute de toutes les conversation////////
+
+  //Array de toutes les conversations//////////
+  const [conversationsArray, setConversationsArray] = useState([]);
+  const [activeConversationData, setActiveConversationData] = useState({});
+
   const [newMessageActive, setNewMessageActive] = useState(false);
   const [blankActive, setBlankActive] = useState(false);
   const [conversationActive, setConversationActive] = useState(false);
   const userProfil = useSelector((state) => state.userReducer.user);
-  let conversationsArray = [];
+  let array = [];
 
-  useEffect(() => {
-    if (userProfil && userProfil.displayName) {
-      axios
-        .get(
-          `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations.json`
-        )
-        .then((res) => setConversationsData(res.data));
-    }
-  }, [userProfil]);
+  const getConversationsData = () => {
+    axios
+      .get(
+        `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${userProfil.displayName}/Conversations.json`
+      )
+      .then((res) => brutDataHandler(res.data));
+  };
 
-  useEffect(() => {
-    conversationsDataHandler();
-  }, [conversationsData]);
-
-  const conversationsDataHandler = () => {
-    for (let key in conversationsData) {
-      let conv = {
-        messagedUser: key,
-        conversationContent: Object.values({ ...conversationsData[key] }),
-      };
-      conversationsArray.push(conv);
-      setConversations(conversationsArray);
+  const updateActiveConvData = () => {
+    if (activeConversationData.messagedUser) {
+      for (let key in conversationsArray) {
+        if (
+          conversationsArray[key].messagedUser ==
+          activeConversationData.messagedUser
+        ) {
+          console.log(conversationsArray[key]);
+          setActiveConversationData({ ...conversationsArray[key] });
+        }
+      }
     }
   };
 
+  useEffect(() => {
+    updateActiveConvData();
+  }, [conversationsArray]);
+
+  useEffect(() => {
+    if (userProfil && userProfil.displayName) {
+      getConversationsData();
+      const interval = setInterval(getConversationsData, 60000);
+
+      return () => clearInterval(interval);
+    }
+  }, [userProfil]);
+
+  const brutDataHandler = (param) => {
+    for (let key in param) {
+      let conv = {
+        messagedUser: key,
+        conversationContent: Object.values({ ...param[key] }),
+      };
+      array.push(conv);
+      console.log(array);
+    }
+    setConversationsArray(array);
+    array = [];
+  };
+
   const conversationMapper = () => {
-    return conversations.map((conversation) => (
+    return conversationsArray.map((conversation) => (
       <li
         className="conv-container"
         onClick={() => openConversation(conversation)}
@@ -68,7 +94,7 @@ const Messages = () => {
   };
 
   const openConversation = (data) => {
-    setConversationData(data);
+    setActiveConversationData(data);
     setConversationActive(true);
   };
 
@@ -78,7 +104,10 @@ const Messages = () => {
         <span style={{ width: '100vw' }} id="white-bg">
           <span id="message-research-container">
             {newMessageActive ? (
-              <MessageResearch openMessageResearch={openMessageResearch} />
+              <MessageResearch
+                openMessageResearch={openMessageResearch}
+                refreshData={getConversationsData}
+              />
             ) : null}
           </span>
         </span>
@@ -101,7 +130,10 @@ const Messages = () => {
       </div>
       <div className="m-right-part">
         {conversationActive ? (
-          <ConversationBox conversationData={conversationData} />
+          <ConversationBox
+            conversationData={activeConversationData}
+            refreshData={getConversationsData}
+          />
         ) : null}
       </div>
     </div>
