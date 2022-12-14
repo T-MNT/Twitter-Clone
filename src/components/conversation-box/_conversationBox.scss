@@ -69,31 +69,59 @@
 
     bottom: 0px;
     border-top: 1px solid $Tgrey;
-    padding: 10px;
     width: 540px;
-    height: 80px;
+    padding: 40px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    form {
+      display: flex;
+      align-items: center;
+      width: 80%;
+    }
 
     textarea {
       margin: auto;
       display: block;
       border: 1px solid $TgreyText;
-      padding: 10px 20px;
-      width: 100%;
+      padding: 10px 40px;
+      width: 70%;
       height: 20px;
+      max-height: 110px;
       color: $Twhite;
       font-size: 1rem;
       font-weight: 200;
       resize: none;
-      border-radius: 50px;
+      border-radius: 20px;
       background: $Tblackless;
+    }
+    textarea::-webkit-scrollbar {
+      width: 10px;
+    }
+    textarea::-webkit-scrollbar-track {
+      background: #252b2f;
+      border-radius: 5px;
+      margin: 20px 0px;
+    }
+    textarea::-webkit-scrollbar-thumb {
+      background: #3e484f;
+      border-radius: 5px;
     }
 
     textarea:focus {
       outline: 1px solid $Tblue;
       border: 1px solid $Tblue;
+    }
+
+    button {
+      background: $Tblue;
+      color: $Twhite;
+      width: 40px;
+      height: 40px;
+      max-height: 40px;
+      border-radius: 30px;
+      cursor: pointer;
     }
   }
 }

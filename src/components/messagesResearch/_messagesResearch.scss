@@ -4,6 +4,7 @@
   padding: 20px;
   background: $Tblackless;
   border: 1px solid $Tgrey;
+  border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 40%;
@@ -13,13 +14,28 @@
 
   .m-research {
     position: relative;
-    height: 100%;
-    width: 100%;
 
     span {
       margin: 0px 0px 15px 95%;
       display: block;
       cursor: pointer;
+    }
+
+    .friendSuggest {
+      max-height: 300px;
+      overflow: auto;
+    }
+    .friendSuggest::-webkit-scrollbar {
+      width: 10px;
+    }
+    .friendSuggest::-webkit-scrollbar-track {
+      background: #252b2f;
+      border-radius: 5px;
+      margin: 20px 0px;
+    }
+    .friendSuggest::-webkit-scrollbar-thumb {
+      background: #3e484f;
+      border-radius: 5px;
     }
   }
 

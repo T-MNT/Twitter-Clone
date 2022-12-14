@@ -124,7 +124,7 @@ const Layout = (props) => {
       </section>
       {document.location.href.split('/')[3] === 'messages' ? null : (
         <section className="trendings-part">
-          <form onSubmit={(e) => search(e)}>
+          <form id="searchbar" onSubmit={(e) => search(e)}>
             <input
               type="text"
               onChange={(e) => setSearchInput(e.target.value)}

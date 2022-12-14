@@ -15,7 +15,7 @@ import { useLocation } from 'react-router-dom';
 import Follow from '../../components/followButton/Follow';
 import FollowDisplayer from '../../components/followDisplayer/FollowDisplayer';
 
-const ProfilPage = (props) => {
+const ProfilPage = () => {
   ////////////STATES//////////////////
   const [editActive, setEditActive] = useState(false);
   const [media, setMedia] = useState('Tweets');
@@ -33,12 +33,10 @@ const ProfilPage = (props) => {
 
   const urlHandler = () => {
     let userDisplayName = document.location.href.split('!')[1];
-    console.log(userDisplayName);
     return userDisplayName;
   };
 
   useEffect(() => {
-    urlHandler();
     axios
       .get(
         `https://twitter-clone-43761-default-rtdb.europe-west1.firebasedatabase.app/Users/${urlHandler()}.json`

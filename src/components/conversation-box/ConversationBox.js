@@ -2,6 +2,8 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ConversationBox = (props) => {
   const userProfil = useSelector((state) => state.userProfilReducer.profil);
@@ -32,6 +34,16 @@ const ConversationBox = (props) => {
         newMessage
       )
       .then(props.refreshData);
+  };
+
+  const textareaHandler = (e) => {
+    if (document.getElementById('txt').scrollHeight > 40) {
+      document.getElementById('txt').style.height = 'auto';
+      document.getElementById('txt').style.height =
+        document.getElementById('txt').scrollHeight * 0.75 + 'px';
+    }
+
+    setNewMessageContent(e);
   };
 
   const messagesMapper = () => {
@@ -68,8 +80,13 @@ const ConversationBox = (props) => {
       <ul>{messagesMapper()}</ul>
       <div className="textarea-container">
         <form onSubmit={(e) => sendMessage(e)}>
-          <textarea onChange={(e) => setNewMessageContent(e.target.value)} />
-          <input type="submit" value="Envoyer" />
+          <textarea
+            id="txt"
+            onChange={(e) => textareaHandler(e.target.value)}
+          />
+          <button type="submit">
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
         </form>
       </div>
     </div>

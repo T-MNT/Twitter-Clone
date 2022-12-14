@@ -37,7 +37,6 @@ const Messages = () => {
           conversationsArray[key].messagedUser ==
           activeConversationData.messagedUser
         ) {
-          console.log(conversationsArray[key]);
           setActiveConversationData({ ...conversationsArray[key] });
         }
       }

@@ -157,7 +157,7 @@ p {
 }
 
 .home h1 {
-  margin: 15px 0px 35px 10px;
+  margin: 15px 0px 35px 20px;
 }
 
 .post-area textarea {
@@ -1255,6 +1255,7 @@ nav #tweet-button {
   padding: 20px;
   background: #15191d;
   border: 1px solid rgba(135, 137, 138, 0.278);
+  border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 40%;
@@ -1267,14 +1268,32 @@ nav #tweet-button {
 
 .m-research-container .m-research {
   position: relative;
-  height: 100%;
-  width: 100%;
 }
 
 .m-research-container .m-research span {
   margin: 0px 0px 15px 95%;
   display: block;
   cursor: pointer;
+}
+
+.m-research-container .m-research .friendSuggest {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.m-research-container .m-research .friendSuggest::-webkit-scrollbar {
+  width: 10px;
+}
+
+.m-research-container .m-research .friendSuggest::-webkit-scrollbar-track {
+  background: #252b2f;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.m-research-container .m-research .friendSuggest::-webkit-scrollbar-thumb {
+  background: #3e484f;
+  border-radius: 5px;
 }
 
 .m-research-container input {
@@ -1329,6 +1348,10 @@ nav #tweet-button {
   max-width: 260px;
 }
 
+.conversation-box .message h4 {
+  margin-bottom: 5px;
+}
+
 .conversation-box #li-my-message {
   margin-left: 250px;
 }
@@ -1379,9 +1402,8 @@ nav #tweet-button {
   position: absolute;
   bottom: 0px;
   border-top: 1px solid rgba(135, 137, 138, 0.278);
-  padding: 10px;
   width: 540px;
-  height: 80px;
+  padding: 40px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1393,23 +1415,59 @@ nav #tweet-button {
           align-items: center;
 }
 
+.conversation-box .textarea-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
 .conversation-box .textarea-container textarea {
   margin: auto;
   display: block;
   border: 1px solid #657786;
-  padding: 10px 20px;
-  width: 100%;
+  padding: 10px 40px;
+  width: 70%;
   height: 20px;
+  max-height: 110px;
   color: #dcdbdb;
   font-size: 1rem;
   font-weight: 200;
   resize: none;
-  border-radius: 50px;
+  border-radius: 20px;
   background: #15191d;
+}
+
+.conversation-box .textarea-container textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.conversation-box .textarea-container textarea::-webkit-scrollbar-track {
+  background: #252b2f;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.conversation-box .textarea-container textarea::-webkit-scrollbar-thumb {
+  background: #3e484f;
+  border-radius: 5px;
 }
 
 .conversation-box .textarea-container textarea:focus {
   outline: 1px solid #1d9af1;
   border: 1px solid #1d9af1;
+}
+
+.conversation-box .textarea-container button {
+  background: #1d9af1;
+  color: #dcdbdb;
+  width: 40px;
+  height: 40px;
+  max-height: 40px;
+  border-radius: 30px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */
