@@ -20,7 +20,6 @@ const SignIn = (props) => {
     link: '',
     inscriptionDate: '',
   });
-  let newdate = { mois: '', jour: '', année: '' };
   let history = useNavigate();
 
   /////////////USE EFFECT////////////////
