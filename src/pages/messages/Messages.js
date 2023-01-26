@@ -30,6 +30,7 @@ const Messages = () => {
       .then((res) => brutDataHandler(res.data));
   };
 
+  ////Met le state activeConversationData à jour selon la conversation en cours/////
   const updateActiveConvData = () => {
     if (activeConversationData.messagedUser) {
       for (let key in conversationsArray) {
@@ -56,6 +57,7 @@ const Messages = () => {
     }
   }, [userProfil]);
 
+  ///////Convertit les données de la bdd en tableau d'objets//////
   const brutDataHandler = (param) => {
     for (let key in param) {
       let conv = {
@@ -69,6 +71,7 @@ const Messages = () => {
     array = [];
   };
 
+  /////Mapping du tableau des conversations////////
   const conversationMapper = () => {
     return conversationsArray.map((conversation) => (
       <li

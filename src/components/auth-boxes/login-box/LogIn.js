@@ -8,8 +8,23 @@ const LogIn = (props) => {
   const [password, setPassword] = useState('');
   let history = useNavigate();
 
+  //////Connecte l'utilisateur ou renvoie une erreur/////
   const loginHandler = (e, mail, password) => {
     e.preventDefault();
+
+    /////Renvoie une erreur en cas de champ(s) non rempli(s)/////
+    if (mail.length < 1) {
+      document.getElementById('error').textContent =
+        'Veuillez renseigner une adresse mail';
+
+      return;
+    }
+    if (password.length < 1) {
+      document.getElementById('error').textContent =
+        'Veuillez renseigner un mot de passe';
+
+      return;
+    }
 
     auth
       .signInWithEmailAndPassword(mail, password)
@@ -19,17 +34,16 @@ const LogIn = (props) => {
           document.getElementById('error').textContent =
             'Mot de passe incorrect';
         }
-        if (error.code === 'auth/invalid-email') {
-          document.getElementById('error').textContent =
-            'Adresse mail inconnue ou invalide';
-        }
-        if (error.code === 'auth/user-not-found') {
+        if (
+          error.code === 'auth/invalid-email' ||
+          error.code === 'auth/user-not-found'
+        ) {
           document.getElementById('error').textContent =
             'Adresse mail inconnue ou invalide';
         }
       });
   };
-
+  //////Ferme la fenêtre/////
   const close = () => {
     props.setLogActive(false);
   };

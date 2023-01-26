@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const SignIn = (props) => {
-  //variables/states
+  //States///
   const [pseudo, setPseudo] = useState('');
   const [mail, setMail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,9 +20,11 @@ const SignIn = (props) => {
     link: '',
     inscriptionDate: '',
   });
+
+  ///Variable/////
   let history = useNavigate();
 
-  /////////////USE EFFECT////////////////
+  /////////////Recupère les données des utilisateurs depuis la bdd////////////////
   useEffect(() => {
     axios
       .get(
@@ -31,12 +33,13 @@ const SignIn = (props) => {
       .then((res) => setUserList(Object.keys(res.data)));
   }, []);
 
-  //fonctions
+  //Ferme la fenêtre//
 
   const close = () => {
     props.setActive(false);
   };
 
+  ////Envoie les données du nouvel utilisateur à la bdd ou renvoie une erreur//////
   const sendForm = (e) => {
     e.preventDefault();
     if (pseudo !== '' && !userList.includes('@' + pseudo)) {
@@ -83,7 +86,7 @@ const SignIn = (props) => {
       document.getElementById('error').textContent =
         "Ce nom d'utilisateur est déjà utilisé";
     }
-    if (pseudo.length < 2) {
+    if (pseudo.length < 1) {
       document.getElementById('error').textContent =
         "Veuillez indiquer votre nom d'utilisateur";
     }
@@ -98,7 +101,7 @@ const SignIn = (props) => {
         <h2>Créer votre compte</h2>
         <p id="error"></p>
         <div className="label-input">
-          <label>Pseudo</label>
+          <label>Nom d'utilisateur</label>
           <input
             type="text"
             onChange={(e) => setPseudo(e.target.value)}
@@ -115,6 +118,12 @@ const SignIn = (props) => {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
+
+        <p>
+          A votre première arrivée sur la page d'accueil, veuillez rafraîchir la
+          page (cette fois uniquement).
+        </p>
+        <br />
 
         <input type="submit" value="Confirmer" onClick={(e) => sendForm(e)} />
       </form>

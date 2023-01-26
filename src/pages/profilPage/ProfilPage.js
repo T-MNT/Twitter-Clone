@@ -94,7 +94,7 @@ const ProfilPage = () => {
     setDisplayerParam('Follower');
   };
 
-  /////////////////FOLLOWS DISPLAYER/////////////////////////////////////////////
+  /////////////////Affiche les follows de l'utilisateur/////////////////////////////////////////////
 
   const followDisplayer = () => {
     if (
@@ -134,7 +134,7 @@ const ProfilPage = () => {
     }
   };
 
-  ////////Follow Button Displayer//////////////////////////////////////////////////
+  ////////Affiche le bouton follow//////////////////////////////////////////////////
   const followButtonDisplayer = () => {
     if (
       user &&
@@ -152,7 +152,7 @@ const ProfilPage = () => {
     }
   };
 
-  ///////////////LINK DISPLAYER////////////////////////////////////////////////////
+  ///////////////Affiche le lien de l'utilisateur////////////////////////////////////////////////////
 
   const linkDisplayer = () => {
     if (
@@ -184,7 +184,7 @@ const ProfilPage = () => {
     }
   };
 
-  ////////////////////LOCATION DISPLAYER//////////////////////////////////////////
+  ////////////////////Affiche la localisation de l'utilisateur//////////////////////////////////////////
 
   const locationDisplayer = () => {
     if (
@@ -281,10 +281,10 @@ const ProfilPage = () => {
     }
   }
 
-  //////////////////////PROFIL DATA DISPLAYER//////////////////////////////////////
+  //////////////////////Rend à l'écran le profil de l'utilisateur//////////////////////////////////////
 
   const profilDataDisplayer = () => {
-    /////////////CAS OU L'UTILISATEUR EST SUR SON PROFIL (UTILISATION DE REDUX POUR + DE DYNAMISME)//////////////////////////////////
+    /////////////CAS OU L'UTILISATEUR EST SUR SON PROFIL (UTILISATION DE REDUX POUR + DE DYNAMISME)////
     if (
       user &&
       user.displayName &&
@@ -342,7 +342,7 @@ const ProfilPage = () => {
         </div>
       );
     }
-    ///////////CAS OU L'UTILISATEUR EST SUR LE PROFIL DE QUELQU'UN D'AUTRE (UTILISATION D'UN STATE CLASSIQUE)///////////////////////
+    ///////////CAS OU L'UTILISATEUR EST SUR LE PROFIL DE QUELQU'UN D'AUTRE (UTILISATION D'UN STATE CLASSIQUE)////////
     else {
       return (
         <div className="profil-container">

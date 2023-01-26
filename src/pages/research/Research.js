@@ -9,6 +9,7 @@ const Research = () => {
   const searchedUsers = location.state.searchedUsers;
   const searchedPosts = location.state.searchedPosts;
 
+  //////Affiche les résultats de la recherche (users et tweets)//////
   const searchedUsersHandler = () => {
     if (searchedUsers.length > 0) {
       return searchedUsers.map((user) => (

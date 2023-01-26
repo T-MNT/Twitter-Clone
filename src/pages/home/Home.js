@@ -35,7 +35,7 @@ const Home = (props) => {
     return d;
   };
 
-  //Fonctions relatives aux tweets//
+  //Création de l'objet 'Tweet'//
 
   const makeTweet = (e) => {
     let newTweet = { ...tweet };
@@ -49,6 +49,7 @@ const Home = (props) => {
     setTweet(newTweet);
   };
 
+  /////Envoi du tweet à la bdd//////
   const sendTweet = (tweet) => {
     if (!tweet.tweet == '') {
       axios
@@ -67,7 +68,7 @@ const Home = (props) => {
     }
   };
 
-  //Fonctions relatives à la Data//
+  //Conversion de l'objet post en array + mapping de l'array//
 
   const dataOp = () => {
     let dataArray = [];
